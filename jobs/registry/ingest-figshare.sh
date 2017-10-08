@@ -23,5 +23,5 @@ VERBOSE=false #for production
 #VERBOSE=true #for testing and debuging 
 
 java -jar $JARFILE \
-  -n ./R.Neo4j/ -s $SOURCE -b xml.rd-switchboard \
-  -p figshare/rdf -C crosswalk.xsl -v ./versions -V "$VERBNOSE"
+  -n ./R.Neo4j/ -s $SOURCE -f ./monash \
+  -C crosswalk.xsl -v ./versions -V "$VERBNOSE"
