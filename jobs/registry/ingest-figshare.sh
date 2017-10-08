@@ -2,11 +2,11 @@ GITLOCALFOLDER=$1
 
 echo "Create clean Neo4j Folder..."
 rm -rf ./R.Neo4j
-git clone https://github.com/researchgraph/R.Neo4j.git
-cp -r $GITLOCALFOLDER/Import-XML/target/* .
+cp -r $GITLOCALFOLDER/R.Neo4j .
 
 echo "Get the Import Program..."
-cp -r $GITLOCALFOLDER/R.Neo4j .
+cp -r $GITLOCALFOLDER/Import-XML/target/* .
+
 
 echo "Get the crosswalks from github.."
 curl https://raw.githubusercontent.com/researchgraph/Crosswalks/master/figshare.com/figshareRDF_to_researchgraph.xsl > ./crosswalk.xsl
