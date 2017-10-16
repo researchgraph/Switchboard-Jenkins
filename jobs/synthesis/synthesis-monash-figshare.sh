@@ -4,7 +4,7 @@ echo "Get the Jenkins files"
 aws s3 --region us-west-2 sync s3://jenkins.switchboard.researchgraph/ .
 
 echo "Get the Synthesis Program..."
-sudo cp -r $GITLOCALFOLDER/mnt/Synthesis/target/* .
+sudo cp -r $GITLOCALFOLDER/Synthesis/target/* .
 
 #echo "Create clean Neo4j Folder..."
 #rm -rf ./R.Neo4j
