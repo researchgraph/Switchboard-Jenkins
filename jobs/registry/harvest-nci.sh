@@ -17,7 +17,7 @@ sudo ./R.Neo4j/bin/neo4j-import --into ./R.Neo4j/data/databases/graph.db \
   --nodes ./csv/researcher.csv \
   --nodes ./csv/datasets.csv \
   --relationships ./csv/relations.csv \
-  --ignore-empty-strings true --stringsmultiline-fields true
+  --ignore-empty-strings true
 
 sudo zip "r-neo4j-nci.zip" ./R.Neo4j
 aws s3 --region eu-west-2 cp "r-neo4j-nci.zip"  s3://nci.registry.researchgraph/neo4j/
