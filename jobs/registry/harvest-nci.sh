@@ -14,7 +14,8 @@ curl https://raw.githubusercontent.com/researchgraph/nci/master/csv/relations.cs
 
 echo "Building Neo4j ... "
 ./R.Neo4j/bin/neo4j-import --into ./R.Neo4j/data/databases/graph.db \
-  --nodes ./csv/researcher.csv \
+  --nodes ./csv/datasets.csv \
+  --nodes ./csv/researchers.csv \
   --relationships ./csv/relations.csv \
   --ignore-empty-strings true
 
