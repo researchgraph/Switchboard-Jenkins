@@ -11,7 +11,7 @@ echo "Starting Neo4j"
 sleep 10s
 
 echo "Exporting GraphML using Neo4j-Shell"
-./bin/neo4j-shell -c -file  ../build-nci-graphml.cli
+./bin/neo4j-shell -c -file  ../build-graphml-nci.cli
 
 echo "Stopping Neo4j"
 ./bin/neo4j stop
