@@ -7,7 +7,7 @@ chmod +x ./bin/neo4j-shell
 echo "Starting Neo4j"
 ./bin/neo4j start
 
-sleep 10s
+sleep 15s
 
 echo "Exporting GraphML using Neo4j-Shell"
 ./bin/neo4j-shell  -v -c -file  ../build-graphml-nci.cli
