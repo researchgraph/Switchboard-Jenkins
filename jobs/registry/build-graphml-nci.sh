@@ -11,6 +11,6 @@ sleep 15s
 ./bin/neo4j status
 
 echo "Exporting GraphML using Neo4j-Shell"
-sudo ./bin/neo4j-shell  -v -c -file  ../build-graphml-nci.cli
+./bin/neo4j-shell  -v -c -file  ../build-graphml-nci.cli
 
 ./bin/neo4j stop
