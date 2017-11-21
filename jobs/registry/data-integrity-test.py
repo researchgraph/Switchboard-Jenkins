@@ -1,5 +1,4 @@
 import sys
-# from py2neo import Node, Relationship
 from py2neo import Graph
 
 valid_labels = ['researcher', 'dataset', 'publication', 'grant', 'axillary', 'nci']
@@ -47,7 +46,7 @@ def main(source_label):
                "('researcher', 'dataset', 'publication', 'grant')" % (error_count, result))
 
     if error_count > 0:
-        raise Exception('This graph cluster is not valid!')
+        sys.exit(-1)
 
 
 if __name__ == "__main__":
