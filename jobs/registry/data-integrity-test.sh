@@ -14,5 +14,4 @@ errors=$(python data-integrity-test.py $SOURCE 2>&1)
 
 ./R.Neo4j/bin/neo4j stop
 
-
-echo errors
+echo $errors
