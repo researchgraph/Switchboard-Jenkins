@@ -1,0 +1,12 @@
+import-cypher -o source-type-nodes.csv match (n) return distinct(n.source) as source, n.type as node_type, count(n)
+import-cypher -o source-type-doi.csv match (n) where exists (n.doi) return distinct(n.source) as source, n.type as node_type, count(n.doi) as number_of_doi, count(distinct(n.doi)) as distinct_doi
+import-cypher -o source-type-scopus_eid.csv match (n) where exists (n.scopus_eid) return distinct(n.source) as source, n.type as node_type, count(n.scopus_eid) as number_of_scopus_eid, count(distinct(n.scopus_eid)) as distinct_scopus_eid
+import-cypher -o source-type-scopus_author_id.csv match (n) where exists (n.scopus_author_id) return distinct(n.source) as source, n.type as node_type, count(n.sscopus_author_id) as number_of_scopus_author_id, count(distinct(n.scopus_author_id)) as distinct_scopus_author_id
+import-cypher -o source-type-relations.csv match (n)-[r]-(m) return distinct(n.source) as source1, m.source as source2, n.type as type1, m.type as type2, count(r) as number_of_connections
+import-cypher -o source-type-researcher-relations.csv match (n:researcher)-[r]-(m) return distinct(n.source) as source1, m.source as source2, n.type as type1, m.type as type2, count(r) as number_of_connections
+//import-cypher -o scopus-eid-types.csv match (n) where exists (n.scopus_eid) return distinct(n.type) as node_type, n.source, count(n)
+//import-cypher -o scopus-author-id-types.csv match (n) where exists (n.scopus_author_id) return distinct(n.type) as node_type, n.source, count(n)
+//import-cypher -o researcher-dataset-relations.csv match (n:researcher)-[r]-(m:dataset) return count(r) as research_to_dataset
+//import-cypher -o researcher-publication-relations.csv match (n:researcher)-[r]-(m:publication) return count(r) as research_to_publication
+import-cypher -o source-type-publication-doi-scopus.csv match (n) where exists(n.publication_year) return distinct(n.source) as source, n.type as node_type, n.publication_year as publication_year, count(n) as number_of_publications, count(distinct(n.doi)) as distinct_doi, count(distinct(n.scopus_eid)) as distinct_scopus_eid
+import-cypher -o orcid-work-type-doi-scopus.csv match (n:orcid) where exists(n.orcid_work_type) return distinct(n.orcid_work_type) as orcid_work_type, n.type as node_type, count(n) as number_of_nodes, count(distinct(n.doi)) as distinct_doi, count(distinct(n.scopus_eid)) as distinct_scopus_eid
