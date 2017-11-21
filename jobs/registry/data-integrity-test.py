@@ -7,7 +7,7 @@ valid_types = ['researcher', 'dataset', 'publication', 'grant', 'axillary']
 
 def main(source_label):
     error_count = 0
-    print "Source Label: '%s' \n" % source_label
+    print "Source Label: '%s'" % source_label
 
     graph = Graph()
 
