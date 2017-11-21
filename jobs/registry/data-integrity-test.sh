@@ -12,7 +12,7 @@ sleep 15s
 rm ./errors.txt
 
 echo "Testing the data integrity"
-errors=$(python data-integrity-test.py $SOURCE 2>&1)
+python data-integrity-test.py $SOURCE
 
 ./R.Neo4j/bin/neo4j stop
 
