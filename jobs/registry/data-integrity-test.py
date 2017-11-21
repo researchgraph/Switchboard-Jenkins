@@ -52,5 +52,5 @@ if __name__ == "__main__":
     errors = main(sys.argv[1])
     if errors > 0:
         text_file = open("errors.txt", "w")
-        text_file.write("We found %d errors" % errors)
+        text_file.write("The data integrity failed because of %d errors." % errors)
         text_file.close()
