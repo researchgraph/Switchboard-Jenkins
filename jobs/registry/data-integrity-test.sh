@@ -17,5 +17,5 @@ python data-integrity-test.py $SOURCE
 ./R.Neo4j/bin/neo4j stop
 
 if [ -f ./errors.txt ]; then
-    echo "There are errors"
+    exit (1)
 fi
