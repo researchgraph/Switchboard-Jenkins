@@ -9,9 +9,13 @@ sleep 15s
 
 ./R.Neo4j/bin/neo4j status
 
+rm ./errors.txt
+
 echo "Testing the data integrity"
 errors=$(python data-integrity-test.py $SOURCE 2>&1)
 
 ./R.Neo4j/bin/neo4j stop
 
-echo $errors
+if [ -f ./errors.txt ]; then
+    echo "There are errors"
+fi

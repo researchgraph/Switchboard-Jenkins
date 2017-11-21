@@ -7,7 +7,7 @@ valid_types = ['researcher', 'dataset', 'publication', 'grant', 'axillary']
 
 def main(source_label):
     error_count = 0
-    print "Source Label: '%s' " % source_label
+    print "Source Label: '%s' \n" % source_label
 
     graph = Graph()
 
@@ -49,6 +49,8 @@ def main(source_label):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
-
-
+    errors = main(sys.argv[1])
+    if errors > 0:
+        text_file = open("errors.txt", "w")
+        text_file.write("We found %d errors" % errors)
+        text_file.close()
