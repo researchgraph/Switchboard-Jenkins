@@ -16,7 +16,7 @@ def main(source_label):
     result = graph.run(query).evaluate()
     if result > 0:
         error_count += 1
-        print ("Error %d: %d nodes have no label!" % (error_count, result))
+        print ("Error %d: %d nodes have no label." % (error_count, result))
         sys.exit(-1)
 
     # Check if all nodes have valid Type Label
