@@ -17,7 +17,7 @@ def main(source_label):
     if result > 0:
         error_count += 1
         print ("Error %d: %d nodes have no label." % (error_count, result))
-        sys.exit(-1)
+        return error_count
 
     # Check if all nodes have valid Type Label
     query = 'MATCH (n) where NOT n:researcher and NOT n:publication and NOT n:dataset and NOT n:grant RETURN count(n)'
@@ -45,8 +45,7 @@ def main(source_label):
         print ("Error %d: %d nodes are missing at least one valid n.type value "
                "('researcher', 'dataset', 'publication', 'grant')" % (error_count, result))
 
-    if error_count > 0:
-        sys.exit(-1)
+    return error_count
 
 
 if __name__ == "__main__":
