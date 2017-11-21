@@ -9,6 +9,8 @@ sleep 15s
 
 ./R.Neo4j/bin/neo4j status
 
+pip install py2neo
+
 echo "Testing the data integrity"
 python data-integrity-test.py $SOURCE
 
