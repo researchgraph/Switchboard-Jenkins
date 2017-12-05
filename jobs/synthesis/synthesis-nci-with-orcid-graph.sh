@@ -3,5 +3,5 @@ cp -r $JENKINS_HOME/jobs/Build-Switchboard-Synthesis/workspace/target/* .
 
 JARFILE=sync-1.1.1.jar
 
-java -jar $JARFILE augment-nci-with-orcid-graph.properties
+java -jar $JARFILE synthesis-nci-with-orcid-graph.properties
 
