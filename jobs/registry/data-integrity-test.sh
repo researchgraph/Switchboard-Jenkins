@@ -1,8 +1,9 @@
-NCINEO4J=$1
+MNTDATA=$1
 SOURCE=$2
 
+echo "Creating the local Neo4j instance by copying from data folder"
 rm -rf ./R.Neo4j
-cp -r $NCINEO4J .
+cp -r $MNTDATA/$SOURCE/R.Neo4j/. ./R.Neo4j
 
 ./R.Neo4j/bin/neo4j start
 sleep 15s
