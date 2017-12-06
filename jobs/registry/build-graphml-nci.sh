@@ -1,7 +1,7 @@
 MNTDATA=$1
 
 rm -rf ./R.Neo4j
-cp -r $MNTDATA/$SOURCE/R.Neo4j/. ./R.Neo4j
+cp -r $MNTDATA/nci/R.Neo4j/. ./R.Neo4j
 
 cd ./R.Neo4j
 
