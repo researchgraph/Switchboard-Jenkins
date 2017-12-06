@@ -2,8 +2,8 @@ RNEO4J=$1
 MNTDATA=$2
 
 echo "Create clean Neo4j Folder..."
-rm -rf ./R.Neo4j
-mkdir ./R.Neo4j
+rm -rf $MNTDATA/nci/R.Neo4j
+mkdir $MNTDATA/nci/R.Neo4j
 cp -r $RNEO4J/. $MNTDATA/nci/R.Neo4j
 
 rm -rf csv
