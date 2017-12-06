@@ -1,12 +1,12 @@
 MNTDATA=$1
 
 rm -rf ./R.Neo4j
-cp -r $NCINEO4J .
+cp -r $MNTDATA/$SOURCE/R.Neo4j/. ./R.Neo4j
 
 cd ./R.Neo4j
 
 ./bin/neo4j start
-sleep 15s
+sleep 25s
 
 ./bin/neo4j status
 
