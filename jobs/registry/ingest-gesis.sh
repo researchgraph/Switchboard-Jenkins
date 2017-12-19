@@ -23,16 +23,3 @@ RELATIONSHIP_FILE_PATH=$CSVFOLDER"/link_db_relationships.csv"
 IMPORT_SCRIPT=$MNTDATA/$SOURCE"/R.Neo4j/bin/neo4j-import"
 $DATABASE_PATH=$MNTDATA/$SOURCE"/R.Neo4j/data/databases/graph.db"
 
-exit 
-
-$MNTDATA/$SOURCE"/R.Neo4j/bin/neo4j-import" --into $MNTDATA/$SOURCE/R.Neo4j/data/databases/graph.db \
-	--nodes $NODE_FILE_PATH1 \
-	--nodes $NODE_FILE_PATH2 \
-	--nodes $NODE_FILE_PATH3 \
-	--nodes $NODE_FILE_PATH4 \
-	--nodes $NODE_FILE_PATH5 \
-	--nodes $NODE_FILE_PATH6 \
-	--relationships $RELATIONSHIP_FILE_PATH
-
-echo "Invalid relationships"
-cat $MNTDATA/$SOURCE/R.Neo4j/data/databases/graph.db/bad.log
