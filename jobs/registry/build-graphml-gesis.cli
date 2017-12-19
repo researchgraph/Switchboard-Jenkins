@@ -1,0 +1,1 @@
+export-graphml -t -o gesis.graphml match (n) optional match (n)-[r]->(m) return n,r,m
