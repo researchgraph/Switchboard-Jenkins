@@ -1,7 +1,7 @@
 RNEO4J=$1
 MNTDATA=$2
 CSVFOLDER=$3 
-SOURCE=#4
+SOURCE=$4
 
 echo "Create clean Neo4j Folder..."
 rm -rf $MNTDATA/$SOURCE/R.Neo4j
