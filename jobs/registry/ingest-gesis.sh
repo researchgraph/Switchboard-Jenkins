@@ -12,7 +12,6 @@ aws s3 --region eu-west-2 cp  s3://$SOURCE.registry.researchgraph/csv-$SOURCE.ta
 tar xvzf csv-$SOURCE.tar.gz
 
 echo "Import into Neo4j"
-NODE_FILE_PATH=$CSVFOLDER"/link_db_entities.csv"
 NODE_FILE_PATH1=$CSVFOLDER"/link_db_entities_dataset.csv"
 NODE_FILE_PATH2=$CSVFOLDER"/link_db_entities_institution.csv"
 NODE_FILE_PATH3=$CSVFOLDER"/link_db_entities_project.csv"
