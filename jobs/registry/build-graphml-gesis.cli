@@ -1,1 +1,1 @@
-export-graphml -t -o gesis.graphml match (n) optional match (z)-[v]->(n)-[r:ResearchGraph]->(m)-[t]->(x) return z,v,n,r,m,t,x limit 10000
+export-graphml -t -o gesis.graphml match (n) optional match (z)-[v]->(n)-[r:ResearchGraph]->(m)-[t]->(x) return z,v,n,r,m,t,x
